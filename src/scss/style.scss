@@ -1,0 +1,57 @@
+//SCSS МИКСИН ДЛЯ ПОДКЛЮЧЕНИЯ ШРИФТОВ
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+// ===============================================================
+//! Подключения......
+// ===============================================================
+// основные настройки сброса и подключения шрифтов "Главные"
+@import "AModernCSSReset.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "icons_fonts.scss";
+@import "mixins.scss";
+@import "animations.scss";
+@import "media.scss";
+// ===============================================================
+//отдельные компоненты сайта
+
+// ===============================================================
+// основные блоки страницы сайта
+
+// ===============================================================
+// общие стили
+
+body {
+    font-family: $mainFont;
+    font-size: 1em;
+    overflow-wrap: break-word;
+    color: $color-black;
+}
+body {
+    height: 100%; //!для фуллскрина
+    main {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; //! для фуллскрина
+        //     .header__body,
+        //     .menu__body,
+        //     .method__body,
+        //     .reviews__body,
+        //     .courses__body,
+        //     .footer__body {
+        //         width: 100%;
+        //         max-width: 1200px;
+        //         margin: 0 auto;
+        //         padding: 0 20px; // общие отсупы контента от блока //!padding: 1% 2% 0 2%;
+        //     }
+    }
+}
+// ===============================================================

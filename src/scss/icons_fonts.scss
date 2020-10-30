@@ -1,0 +1,146 @@
+@font-face {
+	font-family: "MyIcons";
+	src: url('../../fonts/MyIcons.eot');
+	src: url('../../fonts/MyIcons.eot?#iefix') format('eot'),
+		url('../../fonts/MyIcons.woff2') format('woff2'),
+		url('../../fonts/MyIcons.woff') format('woff'),
+		url('../../fonts/MyIcons.ttf') format('truetype'),
+		url('../../fonts/MyIcons.svg#MyIcons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "MyIcons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-right2 {
+		$char: "\E001";
+	}
+	@if $filename == clock {
+		$char: "\E002";
+	}
+	@if $filename == envelop {
+		$char: "\E003";
+	}
+	@if $filename == facebook-f-brands {
+		$char: "\E004";
+	}
+	@if $filename == facebook-messenger-brands {
+		$char: "\E005";
+	}
+	@if $filename == google-plus-g-brands {
+		$char: "\E006";
+	}
+	@if $filename == graduation {
+		$char: "\E007";
+	}
+	@if $filename == heart {
+		$char: "\E008";
+	}
+	@if $filename == instagram-brands {
+		$char: "\E009";
+	}
+	@if $filename == mobile {
+		$char: "\E00A";
+	}
+	@if $filename == pushpin {
+		$char: "\E00B";
+	}
+	@if $filename == quotes-right {
+		$char: "\E00C";
+	}
+	@if $filename == stats-bars {
+		$char: "\E00D";
+	}
+	@if $filename == telegram-brands {
+		$char: "\E00E";
+	}
+	@if $filename == twitter-brands {
+		$char: "\E00F";
+	}
+	@if $filename == user-check {
+		$char: "\E010";
+	}
+	@if $filename == viber-brands {
+		$char: "\E011";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-arrow-right2 {
+	@include icon(arrow-right2);
+}
+.icon-clock {
+	@include icon(clock);
+}
+.icon-envelop {
+	@include icon(envelop);
+}
+.icon-facebook-f-brands {
+	@include icon(facebook-f-brands);
+}
+.icon-facebook-messenger-brands {
+	@include icon(facebook-messenger-brands);
+}
+.icon-google-plus-g-brands {
+	@include icon(google-plus-g-brands);
+}
+.icon-graduation {
+	@include icon(graduation);
+}
+.icon-heart {
+	@include icon(heart);
+}
+.icon-instagram-brands {
+	@include icon(instagram-brands);
+}
+.icon-mobile {
+	@include icon(mobile);
+}
+.icon-pushpin {
+	@include icon(pushpin);
+}
+.icon-quotes-right {
+	@include icon(quotes-right);
+}
+.icon-stats-bars {
+	@include icon(stats-bars);
+}
+.icon-telegram-brands {
+	@include icon(telegram-brands);
+}
+.icon-twitter-brands {
+	@include icon(twitter-brands);
+}
+.icon-user-check {
+	@include icon(user-check);
+}
+.icon-viber-brands {
+	@include icon(viber-brands);
+}

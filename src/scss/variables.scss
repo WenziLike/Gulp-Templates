@@ -1,0 +1,68 @@
+/* Vars:
+  ========================================================================== */
+
+// Font
+$mainFont: "Montserrat", Helvetica, Arial, sans-serif;
+// $mainFont: "SanFran";
+// Size
+$mainFontColor: #101010;
+$mainFontSize: 18px;
+$mainFontWeight: 400;
+$mainLineHeight: 1.4;
+
+$desktopWidth: 1280px;
+$smDesktopWidth: 1024px;
+$tableWidth: 768px;
+$smTableWidth: 640px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+// Main color
+$default-color: #ffffff;
+$primary-color: #444ce0;
+$success-color: #26de81;
+$danger-color: #fc5c65;
+$warning-color: #fed330;
+$light-color: #999999;
+$purple-color: #8854d0;
+$lightcyan: #e0ffff;
+$aliceblue: #f0f8ff;
+// Neutral Color
+$neutral-primary: #303133;
+$neutral-regular: #606266;
+$neutral-secondary: #909399;
+$neutral-placeholder: #c0c4cc;
+// Border Color
+$border-base: #dcdfe6;
+$border-light: #e4e7ed;
+$border-lighter: #ebeef5;
+$border-lightex: #f2f6fc;
+
+// ====================================================================
+// HEADER цвета
+$color-headerText: #ffffffa1;
+
+// ====================================================================
+$color-links: #ffffffa6;
+// ===================================
+// обычные цвета
+$color-white: #ffffff;
+$color-lghtgre: #73ff00;
+$color-lighblue: #aae8eb96;
+$color-black: #000000;
+$color-LuminescentRed: #ec0404;
+$color-UltramarineBlue: #273164;
+$color-yellow: #ffee00;
+// ===================================
+//!SOCIAL цвета соц ситей
+$color-viber: #665cac;
+$color-fsbook: #0075ee;
+$color-insta: #e6abff;
+$color-telegram: #0088cc; // #6dc7ff
+$color-twitter: #00aced;
+$color-google: #dd4b39;
+
+// ====================================================================
+//!MODAL
+$color-bgModal: #2c2c2c; // цвет фона блока модального окна
+// ===================================
+$color-footer: #f8f8f8; // фон футера
